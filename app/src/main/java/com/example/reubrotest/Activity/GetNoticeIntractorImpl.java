@@ -1,10 +1,11 @@
-package com.example.reubrotest;
+package com.example.reubrotest.Activity;
 
 import android.util.Log;
 
-import model.NoticeList;
-import my_interface.GetNoticeDataService;
-import network.RetroFitInstance;
+import com.example.reubrotest.Activity.MainContract;
+import com.example.reubrotest.model.NoticeList;
+import com.example.reubrotest.my_interface.GetNoticeDataService;
+import com.example.reubrotest.network.RetroFitInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,7 +28,7 @@ public class GetNoticeIntractorImpl implements MainContract.GetNoticeIntractor {
         call.enqueue(new Callback<NoticeList>() {
             @Override
             public void onResponse(Call<NoticeList> call, Response<NoticeList> response) {
-                onFinishedListener.onFinished(response.body().getNoticeArrayList());
+                onFinishedListener.onFinished(response.body().getData());
 
             }
 

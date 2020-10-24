@@ -1,7 +1,7 @@
-package com.example.reubrotest;
+package com.example.reubrotest.Activity;
 
 
-import model.Notice;
+import com.example.reubrotest.model.Notice;
 
 public interface RecyclerItemClickListener {
     void onItemClick(Notice notice);

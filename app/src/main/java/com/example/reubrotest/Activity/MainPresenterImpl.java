@@ -1,8 +1,9 @@
-package com.example.reubrotest;
+package com.example.reubrotest.Activity;
 
 import java.util.ArrayList;
 
-import model.Notice;
+import com.example.reubrotest.Activity.MainContract;
+import com.example.reubrotest.model.Notice;
 
 public class MainPresenterImpl implements MainContract.presenter, MainContract.GetNoticeIntractor.OnFinishedListener {
 

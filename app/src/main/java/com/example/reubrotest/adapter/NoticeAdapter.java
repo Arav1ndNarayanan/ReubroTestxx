@@ -1,4 +1,4 @@
-package adapter;
+package com.example.reubrotest.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,16 +8,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.reubrotest.R;
+import com.example.reubrotest.model.Category;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import model.Notice;
+import com.example.reubrotest.model.Notice;
 
 public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeViewHolder> {
 
+
     public ArrayList<Notice> dataList;
+    public ArrayList<Category> dataLists;
     Context context;
 
     public NoticeAdapter(ArrayList<Notice> dataList) {
@@ -33,9 +35,9 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
 
     @Override
     public void onBindViewHolder(NoticeViewHolder holder, int position) {
-        holder.name.setText(dataList.get(position).getCategories().getCategory_name());
+        holder.name.setText(dataList.get(position).getCategories().get(position).getCategoryName());
 
-        Picasso.with(holder.image.getContext()).load(dataList.get(position).getCategories().getImage()).resize(400,500).into(holder.image);
+        Picasso.with(holder.image.getContext()).load(dataList.get(position).getCategories().get(position).getCategoryImage()).resize(400,500).into(holder.image);
 
     }
 

@@ -1,7 +1,7 @@
-package my_interface;
+package com.example.reubrotest.my_interface;
 
 
-import model.NoticeList;
+import com.example.reubrotest.model.NoticeList;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
